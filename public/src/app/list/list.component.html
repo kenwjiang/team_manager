@@ -1,0 +1,21 @@
+<div class="table_container">
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Preferred Position</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let player of players">
+                <td>{{player.name}}</td>
+                <td>{{player.position}}</td>
+                <td><button class="btn btn-danger" (click)="delete(player)">Delete</button></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+</div>

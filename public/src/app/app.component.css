@@ -1,0 +1,10 @@
+header li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+header li + li:before {
+    content: " | ";
+    padding: 0 15px;
+}

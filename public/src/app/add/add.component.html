@@ -1,0 +1,19 @@
+<div class="addForm">
+        <h1>Add Player</h1>
+        <form (submit)="addPlayer()">
+            <div class="form-group">
+                <label for="name">Player Name: </label>
+                <input type="text" required minlength='3' id="pname" #pname="ngModel" name="player.name" [(ngModel)]="player.name"><br>
+                <div class="alert alert-warning" *ngIf=" (pname.invalid && (pname.dirty || pname.touched))">
+                   <span *ngIf="pname.errors.required">name is required</span>
+                   <span *ngIf="pname.errors.minlength">name must be at least 2 characters</span>
+               </div>
+               <div class="alert alert-danger" *ngIf="errorMsg">
+                   <span>name already exists in our database</span>
+               </div>
+                <label for="position">Preferred Position: </label>
+                <input type="text" name="position" [(ngModel)]='position'><br>
+                <button [disabled]="pname.invalid" class="btn btn-success subBtn" type="submit" status2="button">ADD</button>
+            </div>
+        </form>
+</div>

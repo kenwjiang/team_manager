@@ -1,0 +1,41 @@
+.container {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.container li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.container li + li:before{
+    content: " | ";
+    padding: 0 15px;
+}
+
+button{
+    margin: 0 2%;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    width: 150px;
+}
+
+.playing {
+    background-color: green;
+    color: white;
+}
+
+.not_playing{
+    background-color: red;
+    color: white
+}
+
+.undecided{
+    background-color: yellow;
+}
+
+.otherBtns{
+    background-color: white;
+}
+button:focus {outline:0;}

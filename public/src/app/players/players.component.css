@@ -1,0 +1,19 @@
+.options li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.options li + li:before {
+    content: " | ";
+    padding: 0 15px;
+}
+.container {
+    border: 2px solid black;
+    background-color: white;
+    margin: 2%;
+}
+
+.options {
+    margin: 2%;
+}
